@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Traveller | Wander Softly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">🌿 The Traveller</a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#tips">Travel Tips</a></li>
+        <li><a href="#contact">Postcard</a></li>
+      </ul>
+    </nav>
+    <span class="count" title="Saved destinations">♥ <b id="saved">0</b></span>
+    <button id="themeBtn" aria-label="Switch day and night">🌙</button>
+    <button id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="sun"></div>
+    <div class="layer" data-speed="10"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path class="h1" d="M0 200 Q200 80 420 170 T860 150 T1200 130 T1440 180 V320 H0Z"/></svg></div>
+    <div class="layer" data-speed="22"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path class="h2" d="M0 240 Q240 120 500 220 T980 200 T1440 210 V320 H0Z"/></svg></div>
+    <div class="layer" data-speed="40"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path class="h3" d="M0 280 Q300 190 620 270 T1180 260 T1440 270 V320 H0Z"/></svg></div>
+    <div class="hero-text">
+      <p class="tag">slow travel &middot; soft landings</p>
+      <h1>Wander <em>softly</em>,<br>return changed.</h1>
+      <a href="#destinations" class="btn">Begin the journey</a>
+      <p class="hint">Psst... try the 🌙 button and move your mouse around</p>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations" class="section reveal">
+    <h2>Where does your soul want to go?</h2>
+    <p class="sub">Sample package prices per person (flights not included)</p>
+    <div class="vibes">
+      <button data-vibe="Quiet">🍃 Quiet</button>
+      <button data-vibe="Magical">✨ Magical</button>
+      <button data-vibe="Sunlit">🌊 Sunlit</button>
+      <button data-vibe="Wild">🏔️ Wild</button>
+    </div>
+
+    <div class="carousel">
+      <button class="arrow" id="prev" aria-label="Previous">‹</button>
+      <div class="viewport">
+        <div class="track" id="track">
+          <!-- slides are built by script.js from the "places" list -->
+        </div>
+      </div>
+      <button class="arrow" id="next" aria-label="Next">›</button>
+    </div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <!-- TIPS (click to flip) -->
+  <section id="tips" class="section reveal">
+    <h2>Little Travel Spells</h2>
+    <p class="sub">Tap a card to reveal the tip</p>
+    <div class="cards">
+      <div class="flip"><div class="inner"><div class="front">🎒<h3>Pack light</h3></div><div class="back">Roll your clothes and carry only what you can lift with one hand.</div></div></div>
+      <div class="flip"><div class="inner"><div class="front">🐢<h3>Go slow</h3></div><div class="back">Stay longer in fewer places. You'll remember more and rush less.</div></div></div>
+      <div class="flip"><div class="inner"><div class="front">🍜<h3>Eat local</h3></div><div class="back">Follow the crowd of locals, not the sign in English.</div></div></div>
+      <div class="flip"><div class="inner"><div class="front">🌱<h3>Leave no trace</h3></div><div class="back">Carry out what you carry in. Leave places softer than you found them.</div></div></div>
+    </div>
+  </section>
+
+  <!-- POSTCARD / FOOTER -->
+  <footer id="contact" class="footer">
+    <h2>Send yourself a postcard ✉️</h2>
+    <form id="postcard">
+      <input id="name" type="text" placeholder="Your name" aria-label="Your name">
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p id="msg"></p>
+    <p class="copy">&copy; 2026 The Traveller. Made with care.</p>
+  </footer>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
